@@ -42,7 +42,7 @@ jobs:
         with: 
          command: |
           docker pull haifappu/spring-app:latest
-          docker stop SpringApp
+          docker stop HaifaSpringApp
           docker system prune -f
           docker run -d -p 8090:8080 --name HaifaSpringApp haifappu/spring-app:latest
          host: ${{ secrets.STAGING_SERVER_IP }}
